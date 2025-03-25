@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michelangelo Di Croce - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Michelangelo Di Croce</h1>
+    <p>IT Support Lead | DevOps Wannabe | Problem Solver</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <!-- Left column -->
+    <aside class="left-column">
+      <div class="profile-photo">
+        <img src="images/photo-for-resume.jpeg" alt="Profile Photo">
+      </div>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Location: Torino, Italy</p>
+        <p>Phone: <a href="tel:+393890529983">+39 389 052 9983</a></p>
+        <div class="contact-logos">
+          <a href="mailto:michelangelo.dicroce23@gmail.com">
+            <img src="images/gmail-logo.png" alt="Email Logo" width="50">
+          </a>
+          <a href="https://www.linkedin.com/in/michelangelo-di-croce-84b84b10b/" target="_blank">
+            <img src="images/linkedin-logo.png" alt="LinkedIn Logo" width="50">
+          </a>
+          <a href="https://github.com/michelangelodicroce" target="_blank">
+            <img src="images/github-logo.png" alt="GitHub Logo" width="50">
+          </a>
+        </div>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <h3>Hard Skills</h3>
+        <ul>
+          <li>AWS (Lambda, S3, DynamoDB, API Gateway, CloudFront, Route 53, CDK)</li>
+          <li>Serverless technologies</li>
+          <li>Python, JavaScript, HTML, CSS</li>
+          <li>CI/CD Pipelines, Infrastructure as Code</li>
+          <li>Cloud Security and Monitoring</li>
+          <li>Networking (DNS, Load Balancing, VPC, Subnets, Firewalls)</li>
+        </ul>
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Leadership and People Management</li>
+          <li>Problem-Solving and Creativity</li>
+          <li>Effective Communication</li>
+          <li>Collaboration in Cross-Functional Teams</li>
+          <li>Adaptability in Dynamic Environments</li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Right column -->
+    <section class="right-column">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate cloud enthusiast with experience in AWS, serverless technologies, and modern web development. 
+          I thrive on solving complex problems and building scalable, efficient solutions. Beyond the cloud, I wear many hats: 
+          as a Google Admin and Slack workspace wizard for my company, I ensure smooth operations and seamless communication. 
+          I also dabble in no-code and low-code platforms, crafting quick solutions that pack a punch. 
+        </p>
+        <p>
+          On top of that, I manage relationships with vendors, negotiate contracts, and lead team in my role as an IT Support Lead.
+          I handle all IT-related aspects of employee lifecycle management, from onboarding new hires to offboarding departing team members.
+          My ability to adapt to dynamic environments and solve complex problems makes me a valuable asset in any team.
+        </p>
+      </section>
+
+      <section id="cv">
+        <h2>Curriculum Vitae</h2>
+        
+        <!-- Work Experience -->
+        <h3>Work Experience</h3>
+        <div class="company">
+          <div class="logo-container">
+            <img src="images/prontopro-logo.png" alt="ProntoPro Logo" width="100">
+          </div>
+          <div class="details-container">
+            <p class="company-name">ProntoPro</p>
+            <ul>
+              <li><strong>IT Support Lead</strong> (January 2025 - Present)</li>
+              <li><strong>IT Associate Support Lead</strong> (August 2023 - January 2025)</li>
+              <li><strong>IT Specialist</strong> (January 2022 - August 2023)</li>
+              <li><strong>IT Support Intern</strong> (August 2021 - December 2021)</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Education -->
+        <h3>Education</h3>
+        <ul>
+          <li><strong>Master's Degree:</strong> Management, Communication, and IT - MCI Innsbruck</li>
+          <li><strong>Master's Degree:</strong> Management Engineering - LIUC Università Cattaneo</li>
+          <li><strong>Bachelor's Degree:</strong> Mechanical Engineering - Politecnico di Torino</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <strong>Cloud Resume Challenge (in progress):</strong> Building a serverless application to showcase my resume with a visitor counter.
+            <span class="project-detail">
+              <a href="how-it-was-build.html">How It Was Built</a>
+            </span>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
+    <p>&copy; 2025 Michelangelo Di Croce. All rights reserved.</p>
+  </footer>
+  <script src="visitor-counter.js"></script>
+
+  <style>
+    /* Center the contact logos above the footer */
+    .contact-logos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .contact-logos img {
+      transition: transform 0.3s;
+    }
+
+    .contact-logos img:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+  </style>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Was Built</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Michelangelo Di Croce</h1>
+    <p>IT Support Lead | DevOps | Problem Solver</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="how-it-was-built">
+      <h2>The Cloud Resume Challenge</h2>
+      
+      <p>
+        This website was built as part of the Cloud Resume Challenge, demonstrating practical cloud engineering skills through a real-world project.
+      </p>
+
+      <h3>Project Components</h3>
+      
+      <h4>1. Frontend Development</h4>
+      <ul>
+        <li>Created a responsive resume website using HTML5 and CSS3</li>
+        <li>Implemented a visitor counter using vanilla JavaScript</li>
+        <li>Designed for both desktop and mobile devices</li>
+      </ul>
+
+      <h4>2. AWS Infrastructure</h4>
+      <ul>
+        <li><strong>S3 Bucket:</strong> Hosts the static website files with proper security configurations</li>
+        <li><strong>CloudFront:</strong> Provides global content delivery and HTTPS security</li>
+        <li><strong>ACM:</strong> Manages SSL/TLS certificate for secure HTTPS connections</li>
+        <li><strong>API Gateway:</strong> Creates RESTful API endpoints for the visitor counter</li>
+        <li><strong>Lambda Function:</strong> Python-based serverless function to process visitor counts</li>
+        <li><strong>DynamoDB:</strong> NoSQL database storing the visitor counter data</li>
+      </ul>
+
+      <h4>3. Infrastructure as Code</h4>
+      <ul>
+        <li>Used AWS CDK with TypeScript for infrastructure definition</li>
+        <li>Implemented stack for all AWS resources</li>
+        <li>Automated S3 deployments using CDK's S3 deployment construct</li>
+      </ul>
+
+      <h4>4. CI/CD Pipeline</h4>
+      <ul>
+        <li>Set up GitHub Actions workflow for automated deployments</li>
+        <li>Configured AWS credentials securely using GitHub Secrets</li>
+        <li>Automated CDK deployments on push to main branch</li>
+      </ul>
+
+      <h4>5. Testing and Monitoring</h4>
+      <ul>
+        <li>Implemented error handling in Lambda function</li>
+        <li>Set up CloudWatch logging for Lambda execution</li>
+        <li>Added CORS handling for API security</li>
+      </ul>
+
+      <h3>Key Technologies Used</h3>
+      <ul>
+        <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+        <li><strong>Backend:</strong> Python 3.11, AWS Lambda</li>
+        <li><strong>Database:</strong> Amazon DynamoDB</li>
+        <li><strong>Infrastructure:</strong> AWS CDK, TypeScript</li>
+        <li><strong>CI/CD:</strong> GitHub Actions</li>
+        <li><strong>AWS Services:</strong> S3, CloudFront, ACM, API Gateway, Lambda, DynamoDB</li>
+      </ul>
+
+      <h3>Learning Outcomes</h3>
+      <p>
+        This project provided hands-on experience with:
+        <ul>
+          <li>Serverless architecture design and implementation</li>
+          <li>Infrastructure as Code using AWS CDK</li>
+          <li>CI/CD pipeline setup and management</li>
+          <li>AWS security best practices</li>
+          <li>Full-stack web development</li>
+        </ul>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
+    <p>&copy; 2025 Michelangelo Di Croce. All rights reserved.</p>
+  </footer>
+
+  <script src="visitor-counter.js"></script>
+</body>
+</html>

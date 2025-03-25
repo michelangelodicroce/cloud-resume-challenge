@@ -1,0 +1,628 @@
+:root {
+  /* Colors */
+  --primary-bg: #f4f4f9;
+  --dark-bg: #1a1a1a;
+  --primary-text: #333;
+  --light-text: #fff;
+  --secondary-text: #666;
+  --border-color: #ddd;
+  
+  /* Spacing */
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  
+  /* Font sizes */
+  --text-sm: 0.85em;
+  --text-base: 1em;
+  --text-lg: 1.2em;
+  --text-xl: 1.5em;
+  --text-2xl: 1.8em;
+  
+  /* Layout */
+  --container-width: 1200px;
+  --border-radius: 8px;
+}
+
+/* General Styles */
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+header {
+  background: var(--primary-text);
+  color: var(--light-text);
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: var(--primary-text);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+h1, h2 {
+  font-weight: 600; /* Grassetto per i titoli */
+  color: var(--primary-text);
+}
+
+h3 {
+  font-weight: 600; /* Grassetto per i sottotitoli */
+  color: var(--primary-text);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-weight: 400;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #eee;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul li a.active {
+  background-color: #eee;
+}
+
+/* Additional Styles for How It Was Built Page */
+#how-it-was-built {
+  padding: 20px;
+  background-color: #fff;  /* Match the index page background */
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#how-it-was-built h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#how-it-was-built p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#how-it-was-built ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+#how-it-was-built li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+#how-it-was-built strong {
+  font-weight: 600;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  max-width: var(--container-width);
+  margin: var(--spacing-lg) auto;
+  gap: var(--spacing-lg);
+  padding: 0 var(--spacing-lg);
+  gap: 20px; /* Spazio tra le colonne */
+}
+
+.column {
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+}
+
+.left-column {
+  composes: column;
+  flex: 1;
+  background: #f4f4f4;
+  padding: 20px; /* Aggiunge spazio interno ai bordi */
+  padding: 20px; /* Spazio interno ai bordi delle colonne */
+}
+
+.right-column {
+  composes: column;
+  flex: 2;
+  background: var(--light-text);
+  padding: 20px; /* Spazio interno ai bordi delle colonne */
+}
+
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto var(--spacing-lg);
+  border: 3px solid var(--border-color); /* Mantiene il bordo */
+  border-radius: 0; /* Rimuove gli angoli arrotondati */
+}
+
+.company {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.logo-container img {
+  width: 80px; /* Ridotto da 100px a 80px */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.details-container {
+  flex: 1;
+}
+
+.company-name {
+  font-size: 1.2em;
+  font-weight: 600; /* Grassetto per il nome dell'azienda */
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.details-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.details-container ul li strong {
+  font-weight: 600; /* Grassetto per i ruoli lavorativi */
+}
+
+.contact-logos {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.contact-logos img {
+  width: 50px;
+  transition: transform 0.3s;
+}
+
+contact-logos img:hover {
+  transform: scale(1.2);
+}
+
+.project-detail {
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+.project-detail a {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #f5f5f5;
+  color: #666;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85em;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+  margin-left: 8px;
+}
+
+.project-detail a:hover {
+  background-color: #eee;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#skills ul,
+#cv ul,
+#projects ul {
+  padding-left: 20px; /* Spazio a sinistra per gli elenchi puntati */
+}
+
+#skills h2, #skills h3,
+#cv h2, #cv h3,
+#projects h2 {
+  margin-bottom: 10px; /* Spazio sotto i titoli */
+}
+
+#skills li,
+#cv li,
+#projects li {
+  margin-bottom: 5px; /* Spazio tra gli elementi della lista */
+}
+
+#skills ul {
+  padding-left: 20px; /* Spazio a sinistra per gli elenchi */
+}
+
+#skills h2, #skills h3 {
+  margin-bottom: 10px; /* Spazio sotto i titoli */
+}
+
+#skills li {
+  margin-bottom: 5px; /* Spazio tra gli elementi della lista */
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: var(--spacing-sm);
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .profile-photo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-logos {
+    gap: 15px;
+  }
+
+  .contact-logos img {
+    width: 40px;
+  }
+
+  .company {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-container {
+    margin-bottom: 15px;
+  }
+
+  .details-container {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  nav ul {
+    padding: 10px;
+  }
+
+  nav ul li a {
+    padding: 8px 16px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  #how-it-was-built {
+    padding: 15px;
+    margin: 10px;
+    max-width: 100%;
+  }
+
+  #how-it-was-built h2 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+  }
+
+  #how-it-was-built p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  #how-it-was-built ul {
+    padding-left: 15px;
+  }
+
+  #how-it-was-built li {
+    margin-bottom: 8px;
+  }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+  .contact-logos {
+    gap: 10px;
+  }
+
+  .contact-logos img {
+    width: 35px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .profile-photo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #how-it-was-built {
+    padding: 12px;
+    margin: 8px;
+  }
+
+  #how-it-was-built h2 {
+    font-size: 1.4em;
+  }
+
+  #how-it-was-built ul {
+    padding-left: 12px;
+  }
+
+  #how-it-was-built p, 
+  #how-it-was-built li {
+    font-size: 0.95em;
+  }
+}
+
+/* Base responsive settings */
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+    padding: 15px;
+  }
+}
+
+/* Tablets and smaller laptops */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .profile-photo img {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* Improved touch targets */
+  .contact-logos {
+    gap: 25px;
+    padding: 10px 0;
+  }
+
+  .contact-logos img {
+    width: 45px;
+    min-height: 45px; /* Ensure minimum touch target size */
+  }
+
+  nav ul li a {
+    padding: 12px 24px; /* Larger touch targets */
+    margin: 5px;
+  }
+
+  /* Typography adjustments */
+  header h1 {
+    font-size: 2em;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.6em;
+    margin-top: 1.5em;
+  }
+}
+
+/* Modern smartphones */
+@media screen and (max-width: 480px) {
+  /* Layout adjustments */
+  .container {
+    padding: 10px;
+  }
+
+  .left-column, .right-column {
+    padding: 15px;
+  }
+
+  /* Typography for mobile */
+  header h1 {
+    font-size: 1.8em;
+    padding: 0 10px;
+  }
+
+  header p {
+    font-size: 1em;
+    padding: 0 15px;
+  }
+
+  /* Profile photo */
+  .profile-photo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Contact section */
+  .contact-logos {
+    gap: 20px;
+  }
+
+  .contact-logos img {
+    width: 40px;
+    min-height: 40px;
+  }
+
+  /* Company section */
+  .company {
+    gap: 15px;
+  }
+
+  .logo-container img {
+    width: 70px;
+  }
+}
+
+/* Modern iPhone Pro Max and large Android devices */
+@media screen and (min-width: 428px) and (max-width: 926px) and (-webkit-min-device-pixel-ratio: 2) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .profile-photo img {
+    width: 130px;
+    height: 130px;
+  }
+
+  /* Improved text rendering */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Foldable devices support */
+@media screen and (max-width: 653px) {
+  .container {
+    padding: 10px;
+  }
+
+  .left-column, .right-column {
+    padding: 12px;
+  }
+}
+
+/* Dark mode support for OLED displays */
+@media (prefers-color-scheme: dark) {
+  .left-column, .right-column {
+    background: var(--dark-bg);
+    color: var(--light-text);
+  }
+
+  body {
+    background-color: #000;
+    color: var(--light-text);
+  }
+
+  h2, h3 {
+    color: #fff;
+  }
+
+  #how-it-was-built {
+    background: var(--dark-bg);
+    color: var(--light-text);
+  }
+
+  #how-it-was-built h2 {
+    color: #fff;
+    border-bottom-color: #444;
+  }
+
+  #how-it-was-built strong {
+    color: #fff;
+  }
+
+  .company-name {
+    color: #fff; /* Change text color to white in dark mode */
+  }
+}

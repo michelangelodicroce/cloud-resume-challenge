@@ -1,0 +1,37 @@
+# CDK and Node.js
+node_modules/
+cdk.out/
+.typescript/
+cdk.context.json
+
+# IDE specific
+.vscode/
+.idea/
+
+# Dependencies
+package-lock.json
+
+# Build outputs
+*.js
+!jest.config.js
+*.d.ts
+
+# CDK asset staging directory
+.cdk.staging/
+cdk.out/
+
+# Environment variables
+.env
+
+# Images directory
+website/images/
+
+# Media files
+cloud-resume-cdk/website/images/*
+!cloud-resume-cdk/website/images/.gitkeep
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ico
+*.svg
